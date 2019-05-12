@@ -57,7 +57,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-tx:5.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:5.1.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-aspects:5.1.6.RELEASE" />
-          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.2" />
+          <element id="library" level="project" name="Maven: com.mchange:c3p0:0.9.5.3" />
           <element id="library" level="project" name="Maven: com.mchange:mchange-commons-java:0.2.11" />
           <element id="library" level="project" name="Maven: com.github.noraui:ojdbc8:12.2.0.1" />
         </element>
