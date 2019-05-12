@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seahouse-compoment" />
+        <module name="seahouse-springboot" />
+        <module name="seahouse-service" />
+        <module name="seahouse-api" />
+      </profile>
+      <profile name="Annotation profile for seahouse-springboot" enabled="true">
+        <sourceOutputDir name="src/main/resources/generated-sources/annotations" />
+        <sourceTestOutputDir name="src/main/resources/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="seahouse-web" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="seahouse-api" target="1.8" />
+      <module name="seahouse-compoment" target="1.8" />
+      <module name="seahouse-service" target="1.8" />
+      <module name="seahouse-springboot" target="1.8" />
+      <module name="seahouse-web" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="seahouse-api" options="-parameters" />
+      <module name="seahouse-compoment" options="-parameters" />
+      <module name="seahouse-service" options="-parameters" />
+      <module name="seahouse-springboot" options="-parameters" />
+      <module name="seahouse-web" options="-parameters" />
+    </option>
+  </component>
+</project>
