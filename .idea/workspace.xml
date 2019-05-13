@@ -8,12 +8,16 @@
   <component name="ChangeListManager">
     <list default="true" id="195af217-9fa1-4851-884a-7b6fc1d2993f" name="Default Changelist" comment="for study springboot">
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/seahouse_api_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/seahouse_api_war_exploded.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/seahouse_springboot_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/seahouse_springboot_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/artifacts/seahouse_web_war_exploded.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/seahouse_web_war_exploded.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_c3p0_0_9_5_2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_mchange_mchange_commons_java_0_2_11.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-compoment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-springboot.iml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-springboot.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/banner.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/application.properties" beforeDir="false" />
@@ -26,15 +30,6 @@
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/banner.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/application.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/banner.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/SeahouseWebApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/ServletInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/web/config/errorpage/ErrorPageConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/web/config/errorpage/ErrorPageConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/web/config/errorpage/ErrorPageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/web/config/springmvc/SpringMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/web/config/webappconfig/MyWebAppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/web/controller/helloworld/HelloWorldController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/com/seahouse/web/controller/userdemo/UserController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/static/css/errorpage/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/static/css/hello/hello.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/static/images/6.PNG" beforeDir="false" />
@@ -56,15 +51,6 @@
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/templates/pages/getuserdemo/list.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/templates/pages/hello/hello.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/classes/templates/pages/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/SeahouseWebApplication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/ServletInitializer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/web/config/errorpage/ErrorPageConfig$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/web/config/errorpage/ErrorPageConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/web/config/errorpage/ErrorPageController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/web/config/springmvc/SpringMvcConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/web/config/webappconfig/MyWebAppConfig.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/web/controller/helloworld/HelloWorldController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/com/seahouse/web/controller/userdemo/UserController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/static/css/errorpage/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/static/css/hello/hello.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/static/images/6.PNG" beforeDir="false" />
@@ -86,7 +72,6 @@
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/templates/pages/getuserdemo/list.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/templates/pages/hello/hello.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/templates/pages/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/classes/test-classes/com/seahouse/SeahouseWebApplicationTests.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/static/css/errorpage/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/static/css/hello/hello.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/static/images/6.PNG" beforeDir="false" />
@@ -108,7 +93,6 @@
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/templates/pages/getuserdemo/list.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/templates/pages/hello/hello.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/templates/pages/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/classes/test-classes/com/seahouse/SeahouseWebApplicationTests.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/static/css/errorpage/style.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/static/css/hello/hello.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/classes/classes/static/images/6.PNG" beforeDir="false" />
@@ -205,12 +189,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/seahouse-compoment/pom.xml">
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
+            <state relative-caret-position="154">
+              <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
             </state>
           </provider>
         </entry>
@@ -250,7 +234,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
           <provider selected="true" editor-type-id="text-editor">
@@ -312,8 +296,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>spring.jackson</find>
-      <find>session</find>
       <find>spring.data</find>
       <find>datasource</find>
       <find>spring.datasource</find>
@@ -342,10 +324,15 @@
       <find>dev</find>
       <find>war</find>
       <find>jar</find>
+      <find>jackson-databind</find>
+      <find>jacksonVersion</find>
     </findStrings>
     <replaceStrings>
       <replace>500</replace>
     </replaceStrings>
+    <dirStrings>
+      <dir>D:\Git\seahouse-springboot</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -401,9 +388,9 @@
         <option value="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/enciphermentutils/Aes_Util.java" />
         <option value="$PROJECT_DIR$/seahouse-compoment/src/main/resources/redis.properties" />
         <option value="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/redisutils/RedisConfig.java" />
-        <option value="$PROJECT_DIR$/seahouse-compoment/pom.xml" />
         <option value="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/excelutils/ExcelUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/seahouse-compoment/pom.xml" />
       </list>
     </option>
   </component>
@@ -745,7 +732,7 @@
       <workItem from="1557623056559" duration="10780000" />
       <workItem from="1557646687295" duration="7100000" />
       <workItem from="1557713583519" duration="4770000" />
-      <workItem from="1557723399256" duration="578000" />
+      <workItem from="1557723399256" duration="1005000" />
     </task>
     <task id="LOCAL-00001" summary="for study springboot">
       <created>1557544281102</created>
@@ -790,7 +777,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39603000" />
+    <option name="totallyTimeSpent" value="40030000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="-6" width="1933" height="1053" extended-state="6" />
@@ -1211,14 +1198,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/seahouse-compoment/pom.xml">
-      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="23" column="37" selection-start-line="23" selection-start-column="37" selection-end-line="23" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/excelutils/ExcelUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-66">
@@ -1234,6 +1213,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
           <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/seahouse-compoment/pom.xml">
+      <provider editor-type-id="MavenHelperPluginDependencyAnalyzer" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="61" column="36" lean-forward="true" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
         </state>
       </provider>
     </entry>
