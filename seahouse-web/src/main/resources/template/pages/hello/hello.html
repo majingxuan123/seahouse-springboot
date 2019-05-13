@@ -1,33 +1,131 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
     <title>HelloWorldBoostrap</title>
     <!-- Bootstrap -->
     <link href="/css/BoostrapCss/bootstrap.min.css" rel="stylesheet">
+    <!--datepicker-->
+    <link href="/css/datepicker/reset.css" rel="stylesheet" type="text/css" media="all"/>
+    <link href="/css/datepicker/style.css" rel="stylesheet" type="text/css" media="all"/>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!-- ------------------------如果小于IE9的话 想要用响应式  就引入下面两个文件--%>  -->
-     <!--[if lt IE 9]>
-     <script src="js/BoostrapJs/html5shiv.min.js"></script>
-     <script src="js/BoostrapJs/respond.min.js"></script>-->
-
+    <!--[if lt IE 9]>
+    <script src="js/boostrap/html5shiv.min.js"></script>
+    <script src="js/boostrap/respond.min.js"></script>-->
     <!--  ---------------------------over   -->
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script type="text/javascript" src="/js/jquery-3.1.1.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script type="text/javascript" src="/js/BoostrapJs/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/js/boostrap/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/datepicker/Ecalendar.jquery.min.js"></script>
+    <script type="text/javascript" src="/js/util/DateUtil.js"></script>
 </head>
+
+<style media="screen">
+    /*for date picker*/
+    body {
+        padding: 100px;
+        font-size: 14px;
+    }
+    h1 {
+        font-size: 26px;
+    }
+    p {
+        font-size: 14px;
+        margin-top: 10px;
+    }
+    pre {
+        background: #eee;
+        border: 1px solid #ddd;
+        border-left: 4px solid #f60;
+        padding: 15px;
+        margin-top: 15px;
+    }
+    h2 {
+        font-size: 20px;
+        margin-top: 20px;
+    }
+    .case {
+        margin-top: 15px
+    }
+    .ECalendar {
+        width: 400px;
+        height: 30px;
+    }
+</style>
 <script type="text/javascript">
-    $(function () {
-        $("#ajaxBtn").click(function () {
+    /**
+     * 设置默认时间
+     */
+    function setDate() {
+        var date = new Date();
+        date.addDate("d", "-1");
+        var dateStr = date.formatDate("yyyy-MM-dd");
+        $("#ECalendar_case1").attr("value", dateStr);
+    }
 
-            alert(123);
-
+    function initDatePicker() {
+        $("#ECalendar_case1").ECalendar({
+            type: "date",
+            skin: "#233",
+            offset: [0, 2]
         });
+    }
+
+    /**
+     * 传入 yyyy-MM-dd
+     * 传出yyyyMMdd  自动补0
+     * @param dateStr
+     * @returns {string}
+     */
+    function getDateStrBySplit(dateStr) {
+        var strs = dateStr.split("-");
+        if (strs[1].length == 1) {
+            strs[1] = "0" + strs[1];
+        }
+        if (strs[2].length == 1) {
+            strs[2] = "0" + strs[2];
+        }
+        return strs[0] + strs[1] + strs[2];
+    }
+
+
+    $(function () {
+        //必须先设置时间再初始化时间选择器
+        setDate();
+        //初始化日期选择器
+        initDatePicker();
+
+
+        $("#ajaxBtn").click(function () {
+            alert(123);
+        });
+
+
+        //时间选择器onclick
+        $("#commit").click(function () {
+            var params = {};
+            var dateStr = $("#ECalendar_case1").val();
+            //获取对象属性值
+            params.dateStr = getDateStrBySplit(dateStr);
+            $.ajax({
+                type: "post",
+                data: params,
+                url: '${path}/front/ajaxUpload',
+                async: true,
+                timeout: "600000",
+                success: function (data) {
+                    alert("已经开启多线程上传  请稍后查看项目日志。");
+                },
+                error: function () {
+                    alert("ajax执行出错");
+                }
+            });
+        })
+
     })
 </script>
 <body>
@@ -35,9 +133,29 @@
 <a class="btn btn-success" href="/login/turnLoginPage" role="button">点击登陆</a>
 <a class="btn btn-default" href="/test/test02?id=99999" role="button">这是test02测试传值</a>
 <br/><br/>
+
+
+<div>
+    <h2>选择日期</h2>
+    <div class="case">
+        <div class="calendarWarp" style="">
+            <input type="text" name="date" class='ECalendar' id="ECalendar_case1"/>
+        </div>
+    </div>
+    <br/>
+    <a class="btn btn-success" id="commit" role="button">上传数据</a>
+    <div style="text-align:center;margin:50px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+        <p>适用浏览器：360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗. 不支持IE8及以下浏览器。</p>
+        <p>来源：<a href="http://sc.chinaz.com/" target="_blank">ZYSOFT</a></p>
+    </div>
+</div>
+
+<br/>
+<br/>
+<br/>
+
 <div style="border: solid 1px red">
     <p class="text-danger">这是test03 测试 form表单传入</p>
-
     <form action="/test/test03">
         id <input type="text" name="id"><br/>
         username <input type="text" name="username"><br/>
@@ -77,7 +195,7 @@
 <br/><br/>
 
 <div>
-    <img class="img-responsive center-block" src="/images/5.jpg" alt="">
+    <img class="img-responsive center-block" src="/images/6.PNG" alt="">
 </div>
 
 <br/><br/>
