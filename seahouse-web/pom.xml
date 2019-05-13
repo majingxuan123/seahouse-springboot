@@ -96,7 +96,9 @@
             </plugin>
         </plugins>
         <!--手动指定maven打包路径-->
-        <!--<directory>src/main/resources</directory>-->
+        <!--        <directory>src/main/resources</directory>-->
+<!--        <directory>/target/</directory>-->
+
     </build>
     <repositories>
         <repository>
