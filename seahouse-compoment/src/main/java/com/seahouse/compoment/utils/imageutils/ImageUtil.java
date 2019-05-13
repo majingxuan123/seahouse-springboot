@@ -58,14 +58,19 @@ public class ImageUtil {
         BufferedImage bufImg = ImageIO.read(srcFile);
         wr = w * 1.0 / bufImg.getWidth();
         hr = h * 1.0 / bufImg.getHeight();
-        Image Itemp = bufImg.getScaledInstance(w, h, bufImg.TYPE_INT_ARGB);
-        AffineTransformOp ato = new AffineTransformOp(AffineTransform.getScaleInstance(wr, hr), null);
-        Itemp = ato.filter(bufImg, null);
-        try {
-            ImageIO.write((BufferedImage) Itemp, dest.substring(dest.lastIndexOf(".") + 1), destFile);
-        } catch (Exception ex) {
-            ex.printStackTrace();
+        if (w != 0 && h != 0) {
+            //Image Itemp = bufImg.getScaledInstance(w, h, BufferedImage.TYPE_INT_ARGB);
+            AffineTransformOp ato = new AffineTransformOp(AffineTransform.getScaleInstance(wr, hr), null);
+            Image iTemp = ato.filter(bufImg, null);
+            try {
+                ImageIO.write((BufferedImage) iTemp, dest.substring(dest.lastIndexOf(".") + 1), destFile);
+            } catch (Exception ex) {
+                ex.printStackTrace();
+            }
+        } else {
+            throw new NullPointerException("传入的高度与宽度不可为0");
         }
+
     }
 
     /**
