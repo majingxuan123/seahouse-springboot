@@ -7,14 +7,9 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="seahouse-compoment" />
+        <module name="seahouse-web" />
         <module name="seahouse-api" />
         <module name="seahouse-service" />
-      </profile>
-      <profile name="Annotation profile for seahouse-springboot" enabled="true">
-        <sourceOutputDir name="src/main/resources/generated-sources/annotations" />
-        <sourceTestOutputDir name="src/main/resources/generated-test-sources/test-annotations" />
-        <outputRelativeToContentRoot value="true" />
-        <module name="seahouse-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

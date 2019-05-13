@@ -1,7 +1,6 @@
 package com.seahouse.compoment.utils.ftputils;
 
 import com.seahouse.compoment.utils.fileutils.FileUtils_sh;
-import com.sun.istack.internal.NotNull;
 import org.apache.commons.io.IOUtils;
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.net.ftp.FTP;
@@ -319,7 +318,7 @@ public class FtpUtil {
      *                  字符编码                  upfileencoding
      * @return 流  如果为空就是没有找到文件
      */
-    public static InputStream getFileInputStream(@NotNull Ftp_param ftp_param) {
+    public static InputStream getFileInputStream(Ftp_param ftp_param) {
         // 声明该方法返回变量
         // 初始化FTPClient对象
         InputStream ins = null;

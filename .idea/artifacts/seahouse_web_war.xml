@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="war" name="seahouse-web:war">
-    <output-path>$PROJECT_DIR$/seahouse-web/src/main/resources</output-path>
+    <output-path>$PROJECT_DIR$/seahouse-web/target</output-path>
     <properties id="maven-jee-properties">
       <options>
         <module>seahouse-web</module>
