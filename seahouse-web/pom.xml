@@ -78,9 +78,7 @@
             <artifactId>spring-boot-starter-freemarker</artifactId>
         </dependency>
     </dependencies>
-
     <build>
-
         <finalName>springboot-seahouse-web</finalName>
         <plugins>
             <!-- 打包项目 mvn clean package -->
@@ -97,7 +95,8 @@
                 </dependencies>
             </plugin>
         </plugins>
-        <directory>src/main/resources</directory>
+        <!--手动指定maven打包路径-->
+        <!--<directory>src/main/resources</directory>-->
     </build>
     <repositories>
         <repository>
