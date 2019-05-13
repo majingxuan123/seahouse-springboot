@@ -1,12 +1,17 @@
 package com.seahouse.service.userdemo.impl;
 
 import com.seahouse.compoment.utils.dao.CommonDao;
+import com.seahouse.compoment.utils.excelutils.ExcelUtils;
 import com.seahouse.domain.entity.TUser;
-import com.seahouse.domain.userdemo.User;
 import com.seahouse.service.userdemo.UserServiceDemoBS;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.io.File;
+import java.io.IOException;
+import java.util.List;
+
+import static com.seahouse.compoment.utils.excelutils.ExcelUtils.excelListsToJson;
 
 /**
  * <ul>
@@ -38,6 +43,20 @@ public class UserServiceDemo implements UserServiceDemoBS {
     @Override
     public TUser getUser(int id) {
         TUser tUser = commonDao.getEntityByid(TUser.class,Long.valueOf(id));
+
+
+        File file = new File("d:/赤峰市医疗机构信息采集表v1.0.xlsx");
+        List<List<String>> list = null;
+        try {
+            list = ExcelUtils.readXlsxFile(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        String str = excelListsToJson(list);
+
+        System.out.println(str);
+
         return tUser;
     }
 }

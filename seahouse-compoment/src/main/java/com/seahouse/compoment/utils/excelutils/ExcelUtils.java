@@ -12,8 +12,6 @@ import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
-import org.springframework.stereotype.Component;
-import org.apache.poi.ss.usermodel.Workbook;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -45,7 +43,7 @@ public class ExcelUtils {
 
 //
 //    public static void main(String[] args) throws Exception {
-//        File file = new File("d:/老年病医院商户号.xlsx");
+//        File file = new File("d:/赤峰市医疗机构信息采集表v1.0.xlsx");
 //        File file2 = new File("d:/老年病医院商户号2222.xls");
 //        List<List<String>> list = readXlsxFile(file);
 //
