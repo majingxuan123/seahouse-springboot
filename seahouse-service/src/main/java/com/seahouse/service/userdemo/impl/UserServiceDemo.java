@@ -43,8 +43,6 @@ public class UserServiceDemo implements UserServiceDemoBS {
     @Override
     public TUser getUser(int id) {
         TUser tUser = commonDao.getEntityByid(TUser.class,Long.valueOf(id));
-
-
         File file = new File("d:/赤峰市医疗机构信息采集表v1.0.xlsx");
         List<List<String>> list = null;
         try {

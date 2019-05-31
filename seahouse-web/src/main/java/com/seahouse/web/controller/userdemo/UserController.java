@@ -43,7 +43,7 @@ public class UserController {
     @RequestMapping("/{id}")
     public String  getUser(@PathVariable int id, Model model) {
         TUser tUser = UserServiceDemo .getUser(id);
-
+        tUser.setUsername("马境宣用于测试乱码");
         model.addAttribute("user", tUser);
         return "/pages/getuserdemo/detail";
     }

@@ -1,7 +1,11 @@
 package com.seahouse.compoment.utils.dao.impl;
 
+import com.seahouse.compoment.config.jdbcconfig.DataSourceConfig;
+import com.seahouse.compoment.config.jdbcconfig.hibernate.HibernateTemplateConfig;
 import com.seahouse.compoment.utils.dao.CommonDao;
 import com.seahouse.compoment.utils.javabeantool.RowMapUtil;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
 import org.springframework.dao.DataAccessException;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -11,6 +15,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.LinkedCaseInsensitiveMap;
 
 import javax.annotation.Resource;
+import javax.sql.DataSource;
 import java.io.Serializable;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -38,23 +43,22 @@ import java.util.*;
  * @version 1.0.0
  */
 @Component
+@ConditionalOnClass({JdbcTemplate.class,DataSource.class, HibernateTemplateConfig.class, DataSourceConfig.class})
 public class CommonDaoImpl implements CommonDao {
-
     /**
      * hibernate
      */
     @Resource
     private HibernateTemplate hibernateTemplate;
-
     @Resource
     private JdbcTemplate jdbcTemplate;
-
     /**
      * 新增实体类
      *
      * @param t
      * @return
      */
+    @Override
     public <T extends Serializable> T addEntity(T t) {
         hibernateTemplate.save(t);
         return t;
@@ -66,6 +70,7 @@ public class CommonDaoImpl implements CommonDao {
      * @param entity
      * @return
      */
+    @Override
     public boolean updateEntity(Serializable entity) {
         boolean flag = false;
         hibernateTemplate.update(entity);
@@ -81,6 +86,7 @@ public class CommonDaoImpl implements CommonDao {
      * @param <T>
      * @return
      */
+    @Override
     public <T> T getEntityByid(Class<T> clazz, Serializable id) {
         return hibernateTemplate.get(clazz, id);
     }
@@ -92,6 +98,7 @@ public class CommonDaoImpl implements CommonDao {
      * @param entity
      * @return
      */
+    @Override
     public boolean delEntity(Serializable entity) {
         try {
             hibernateTemplate.delete(entity);
@@ -105,6 +112,7 @@ public class CommonDaoImpl implements CommonDao {
      * @param seq
      * @return
      */
+    @Override
     public String getSequence(String seq) {
         Object obj = null;
         List list = this.jdbcTemplate.queryForList("SELECT " + seq + ".NEXTVAL AS SEQ FROM DUAL");
@@ -122,6 +130,7 @@ public class CommonDaoImpl implements CommonDao {
      * @param <T>
      * @return
      */
+    @Override
     public <T> T getEntityBySql(String sql, Class<T> className) {
         List<T> list = jdbcTemplate.query(sql, new BeanPropertyRowMapper(className));
         if (list != null && list.size() != 0) {
@@ -141,7 +150,8 @@ public class CommonDaoImpl implements CommonDao {
      * @param <T>
      * @return
      */
-    public <T> List<T> queryForList(String sql, Class<T> classType) {
+    @Override
+    public <T> List<T> queryForListBySql(String sql, Class<T> classType) {
         new ArrayList();
         List<T> list = this.jdbcTemplate.query(sql, new BeanPropertyRowMapper(classType));
         return list;
@@ -153,6 +163,7 @@ public class CommonDaoImpl implements CommonDao {
      * @param sql
      * @return
      */
+    @Override
     public int updateBySql(String sql) {
         int[] ints = jdbcTemplate.batchUpdate(sql);
         return ints[0];
@@ -179,7 +190,8 @@ public class CommonDaoImpl implements CommonDao {
      * @param <T>
      * @return
      */
-    public <T> T getDtoEntity(String sql, Class<T> className) {
+    @Override
+    public <T> T getDtoEntityBySql(String sql, Class<T> className) {
         List<T> list = this.queryToDTO(sql, className);
         if (list != null && list.size() != 0) {
             if (list.size() == 1) {

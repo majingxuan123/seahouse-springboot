@@ -1,7 +1,11 @@
 package com.seahouse.service.helloword.impl;
 
+import com.seahouse.compoment.utils.redisutils.RedisUtil;
 import com.seahouse.service.helloword.HelloWorldBS;
+import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.Resource;
 
 
 /**
@@ -27,8 +31,17 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class HelloWorldBsImpl implements HelloWorldBS {
+
+    @Resource
+    private RedisUtil redisUtil;
+
     @Override
     public void sayHello() {
-        System.out.println("Hello World");
+
+        if(redisUtil.get("hello")==null){
+            redisUtil.set("hello","hello world");
+        }
+
+        System.out.println(redisUtil.get("hello").toString());
     }
 }

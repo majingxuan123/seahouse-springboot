@@ -81,7 +81,7 @@ public interface CommonDao {
      * @param <T>
      * @return
      */
-    public <T> List<T> queryForList(String sql, Class<T> classType);
+    public <T> List<T> queryForListBySql(String sql, Class<T> classType);
 
     /**
      * 通过SQL   update操作
@@ -103,7 +103,7 @@ public interface CommonDao {
      * @param <T>
      * @return
      */
-    public <T> T getDtoEntity(String sql, Class<T> className);
+    public <T> T getDtoEntityBySql(String sql, Class<T> className);
 
 
 }

@@ -1,7 +1,14 @@
-package com.seahouse.compoment.config.jdbcconfig;
+package com.seahouse.compoment.config.jdbcconfig.hibernate;
 
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
+import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.*;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
+import sun.awt.SunHints;
+
 import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Properties;
@@ -28,13 +35,11 @@ import java.util.Properties;
  * @version 1.0.0
  */
 @Configuration
-public class SessionFactoryConfig {
+public class HibernateSessionFactoryConfig {
 
-    @Resource
-    private DataSource dataSource;
-
+    @ConditionalOnMissingBean
     @Bean("sessionFactory")
-    public LocalSessionFactoryBean sessionFactory() {
+    public LocalSessionFactoryBean sessionFactory(DataSource dataSource) {
         LocalSessionFactoryBean localSessionFactoryBean = new LocalSessionFactoryBean();
         localSessionFactoryBean.setDataSource(dataSource);
         localSessionFactoryBean.setPackagesToScan("com.seahouse.domain.entity");
