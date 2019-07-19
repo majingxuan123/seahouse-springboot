@@ -4,6 +4,7 @@ import com.seahouse.compoment.utils.redisutils.RedisUtil;
 import com.seahouse.service.helloword.HelloWorldBS;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
@@ -29,6 +30,8 @@ import javax.annotation.Resource;
  * @author majx
  * @version 1.0.0
  */
+//加上注解后   public方法全部有事务
+@Transactional
 @Service
 public class HelloWorldBsImpl implements HelloWorldBS {
 
