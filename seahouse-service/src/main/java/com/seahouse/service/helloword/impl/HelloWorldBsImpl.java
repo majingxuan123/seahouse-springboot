@@ -1,8 +1,9 @@
 package com.seahouse.service.helloword.impl;
 
+import com.seahouse.compoment.utils.dao.CommonDao;
 import com.seahouse.compoment.utils.redisutils.RedisUtil;
+import com.seahouse.domain.entity.TUser;
 import com.seahouse.service.helloword.HelloWorldBS;
-import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -38,13 +39,27 @@ public class HelloWorldBsImpl implements HelloWorldBS {
     @Resource
     private RedisUtil redisUtil;
 
+    @Resource(name = "commonDaoImpl")
+    private CommonDao commonDao;
+
+
     @Override
     public void sayHello() {
 
-        if(redisUtil.get("hello")==null){
-            redisUtil.set("hello","hello world");
+        if (redisUtil.get("hello") == null) {
+            redisUtil.set("hello", "hello world");
         }
 
         System.out.println(redisUtil.get("hello").toString());
+    }
+
+    @Override
+    public void sayHelloJdbc() {
+        TUser entityBySql = commonDao.getEntityBySQL("select * from T_USER where user_id = ? ", TUser.class,"1");
+        System.out.println("我的生日是："+entityBySql.getBirthday());
+
+        String seq_user_id = commonDao.getSequence("SEQ_USER_ID");
+        System.out.println("getsequence====>"+seq_user_id);
+
     }
 }

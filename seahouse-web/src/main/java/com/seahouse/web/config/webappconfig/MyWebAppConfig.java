@@ -41,6 +41,7 @@ import org.springframework.web.servlet.resource.ResourceResolverChain;
 import org.springframework.web.servlet.resource.ResourceTransformer;
 import org.springframework.web.servlet.resource.ResourceTransformerChain;
 import org.springframework.web.util.UrlPathHelper;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
@@ -73,7 +74,7 @@ import java.util.Set;
  * @version 1.0.0
  */
 @Configuration
-public class MyWebAppConfig implements WebMvcConfigurer{
+public class MyWebAppConfig implements WebMvcConfigurer {
 
     @Override
     public void configureMessageConverters(List<HttpMessageConverter<?>> converters) {
@@ -259,12 +260,11 @@ public class MyWebAppConfig implements WebMvcConfigurer{
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(new HandlerInterceptor() {
+        InterceptorRegistration registration = registry.addInterceptor(new HandlerInterceptor() {
             @Override
             public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
+
                 System.out.println("自定义拦截器");
-
-
                 return true;
             }
 
@@ -277,7 +277,16 @@ public class MyWebAppConfig implements WebMvcConfigurer{
             public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
 
             }
-        }).addPathPatterns("/**");
+        });
+        //排除的路径
+//      registration.excludePathPatterns("/login");
+//      registration.excludePathPatterns("/logout");
+
+        //拦截全部
+        registration.addPathPatterns("/**");
+
+        //将这个controller放行
+//        registration.excludePathPatterns("/pages/errorpage/*");
     }
 
 //    @Override
@@ -440,12 +449,6 @@ public class MyWebAppConfig implements WebMvcConfigurer{
 //        // 用于拓展活修改已经加入配置中的解析器
 //        resolvers.add(1, new DefaultHandlerExceptionResolver());
 //    }
-
-
-
-
-
-
 
 
 }

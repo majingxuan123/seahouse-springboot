@@ -25,4 +25,7 @@ import org.springframework.stereotype.Service;
  */
 public interface HelloWorldBS {
     public void sayHello();
+
+
+    public void sayHelloJdbc();
 }

@@ -9,8 +9,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @author mjx
  */
 //默认扫描当前包下的子包
-//@SpringBootApplication(scanBasePackages="com.seahouse.**")
-@SpringBootApplication()
+@SpringBootApplication(scanBasePackages="com.seahouse.**")
 public class SeahouseWebApplication {
 
     public static void main(String[] args) {

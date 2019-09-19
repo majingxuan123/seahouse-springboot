@@ -8,11 +8,11 @@
         <outputRelativeToContentRoot value="true" />
         <module name="seahouse-compoment" />
         <module name="seahouse-web" />
-        <module name="seahouse-api" />
         <module name="seahouse-service" />
+        <module name="seahouse-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
+    <bytecodeTargetLevel target="1.8">
       <module name="seahouse-api" target="1.8" />
       <module name="seahouse-compoment" target="1.8" />
       <module name="seahouse-service" target="1.8" />

@@ -2,7 +2,7 @@ package com.seahouse.web.controller.userdemo;
 
 import com.seahouse.domain.entity.TUser;
 import com.seahouse.domain.userdemo.User;
-import com.seahouse.service.userdemo.impl.UserServiceDemo;
+import com.seahouse.service.userdemo.impl.UserServiceDemoBSImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,11 +38,13 @@ import java.util.List;
 public class UserController {
 
     @Resource
-    private UserServiceDemo UserServiceDemo;
+    private UserServiceDemoBSImpl UserServiceDemo;
+
 
     @RequestMapping("/{id}")
     public String  getUser(@PathVariable int id, Model model) {
-        TUser tUser = UserServiceDemo .getUser(id);
+        TUser tUser = UserServiceDemo.getUser(id);
+
         tUser.setUsername("马境宣用于测试乱码");
         model.addAttribute("user", tUser);
         return "/pages/getuserdemo/detail";

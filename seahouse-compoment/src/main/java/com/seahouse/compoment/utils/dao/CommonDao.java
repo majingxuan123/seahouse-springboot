@@ -1,7 +1,17 @@
 package com.seahouse.compoment.utils.dao;
 
+import com.seahouse.compoment.utils.dao.po.StoredFunctionPO;
+import com.seahouse.compoment.utils.dao.po.StoredProcedurePO;
+import org.hibernate.LockMode;
+import org.hibernate.Session;
+import org.hibernate.criterion.DetachedCriteria;
+import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.orm.hibernate5.HibernateTemplate;
+
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
 /**
  * <ul>
@@ -26,84 +36,77 @@ import java.util.List;
  */
 public interface CommonDao {
 
+    HibernateTemplate getHibernateTemplate();
 
-    /**
-     * 新增实体类
-     *
-     * @param t
-     * @return
-     */
-    public <T extends Serializable> T addEntity(T t);
+    void saveEntity(Serializable var1);
 
-    /**
-     * 修改实体类
-     *
-     * @param entity
-     * @return
-     */
-    public boolean updateEntity(Serializable entity);
+    void saveOrUpdateEntity(Serializable var1);
 
+    void deleteEntity(Serializable var1);
 
-    /**
-     * 根据主键获取实体类
-     *
-     * @param clazz
-     * @param id
-     * @param <T>
-     * @return
-     */
-    public <T> T getEntityByid(Class<T> clazz, Serializable id);
-    /**
-     * 删除实体类
-     *
-     * @param entity
-     * @return
-     */
-    public boolean delEntity(Serializable entity);
+    void deleteEntity(Serializable var1, LockMode var2);
 
-    /**
-     * @param seq
-     * @return
-     */
-    public String getSequence(String seq);
+    void deleteEntityAll(Collection<? extends Serializable> var1);
 
-    /**
-     * @param sql
-     * @param className
-     * @param <T>
-     * @return
-     */
-    public <T> T getEntityBySql(String sql, Class<T> className);
+    void updateEntity(Serializable var1);
 
-    /**
-     * @param sql
-     * @param classType
-     * @param <T>
-     * @return
-     */
-    public <T> List<T> queryForListBySql(String sql, Class<T> classType);
+    void updateEntity(Serializable var1, LockMode var2);
 
-    /**
-     * 通过SQL   update操作
-     *
-     * @param sql
-     * @return
-     */
-    public int updateBySql(String sql);
+    <T> T loadEntity(Class<T> var1, Serializable var2);
 
-    /**
-     * 获取DOT
-     * <p>
-     * 定义一个DTO   有A表和B表的字段
-     * <p>
-     * 直接通过这个来查询可以
-     *
-     * @param sql
-     * @param className
-     * @param <T>
-     * @return
-     */
-    public <T> T getDtoEntityBySql(String sql, Class<T> className);
+    <T> T loadEntity(Class<T> var1, Serializable var2, LockMode var3);
+
+    <T> T getEntity(Class<T> var1, Serializable var2);
+
+    <T> T getEntity(Class<T> var1, Serializable var2, LockMode var3);
+
+    <T> T getEntityBySQL(String var1, Class<T> var2);
+
+    <T> T getEntityBySQL(String var1, Class<T> var2, Object... var3);
+
+//    <T> List<T> getDataList(DetachedCriteria var1);
+
+    void flush();
+
+    <T> List<T> queryForList(String var1, Class<T> var2);
+
+    <T> List<T> queryForList(String var1, Class<T> var2, Object... var3);
+
+    List<Map<String, Object>> queryForList(String var1);
+
+    List<Map<String, Object>> queryForList(String var1, Object... var2);
+
+    int queryForInt(String var1);
+
+    int queryForInt(String var1, Object... var2);
+
+    SqlRowSet queryForRowSet(String var1);
+
+    SqlRowSet queryForRowSet(String var1, Object... var2);
+
+    <T extends Serializable> void lock(T var1, LockMode var2);
+
+    Map<String, Object> queryForMap(String var1);
+
+    Map<String, Object> queryForMap(String var1, Object... var2);
+
+    int[] batchUpdate(String... var1);
+
+    int update(String var1, Object... var2);
+
+    void callProcedure(StoredProcedurePO var1);
+
+    void callFunction(StoredFunctionPO var1);
+
+    String getSequence(String var1);
+
+    String getLSequence(String var1, int var2);
+
+    String getRSequence(String var1, int var2);
+
+    String getValueFromTab(String var1, String var2, String var3);
+
+    Session getCurrentSession();
 
 
 }

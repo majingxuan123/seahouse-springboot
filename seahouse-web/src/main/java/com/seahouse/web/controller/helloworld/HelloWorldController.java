@@ -42,4 +42,12 @@ public class HelloWorldController {
     }
 
 
+    @RequestMapping("/test")
+    public String test(HttpServletRequest request, HttpServletResponse response) {
+        helloWorldBS.sayHelloJdbc();
+        return "pages/hello/hello";
+    }
+
+
+
 }
