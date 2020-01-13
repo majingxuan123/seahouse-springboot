@@ -19,26 +19,9 @@
     </properties>
 
     <dependencies>
-        <!--全局排除spring-boot-starter-logging内的所有依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-<!--            <exclusions>&lt;!&ndash; 去掉springboot默认logback配置 &ndash;&gt;-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.springframework.boot</groupId>-->
-<!--                    <artifactId>spring-boot-starter-logging</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
         </dependency>
         <!--引用子项目的依赖-->
         <dependency>
@@ -51,7 +34,6 @@
             <artifactId>seahouse-compoment</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-
         <!-- web项目-->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -69,7 +51,6 @@
             <groupId>org.apache.tomcat</groupId>
             <artifactId>tomcat-jsp-api</artifactId>
         </dependency>
-
         <!--添加依赖 热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -77,14 +58,6 @@
             <!-- optional=true,依赖不会传递，该项目依赖devtools；之后依赖myboot项目的项目如果想要使用devtools，需要重新引入 -->
             <optional>true</optional>
         </dependency>
-
-        <!-- https://mvnrepository.com/artifact/com.google.zxing/core -->
-        <dependency>
-            <groupId>com.google.zxing</groupId>
-            <artifactId>core</artifactId>
-            <version>3.3.0</version>
-        </dependency>
-
 
 
     </dependencies>

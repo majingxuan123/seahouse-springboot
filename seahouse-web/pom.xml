@@ -7,37 +7,33 @@
         <artifactId>seahouse-springboot</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
+
     <groupId>com.seahouse</groupId>
     <artifactId>seahouse-web</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>war</packaging>
     <name>seahouse-web</name>
     <description>Demo project for Spring Boot</description>
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
 
     <dependencies>
-        <!--全局排除spring-boot-starter-logging内的所有依赖-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-logging</artifactId>
-            <exclusions>
-                <exclusion>
-                    <groupId>*</groupId>
-                    <artifactId>*</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
+        <!--        &lt;!&ndash;全局排除spring-boot-starter-logging内的所有依赖&ndash;&gt;-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-logging</artifactId>-->
+        <!--            <exclusions>-->
+        <!--                <exclusion>-->
+        <!--                    <groupId>*</groupId>-->
+        <!--                    <artifactId>*</artifactId>-->
+        <!--                </exclusion>-->
+        <!--            </exclusions>-->
+        <!--        </dependency>-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-<!--            <exclusions>&lt;!&ndash; 去掉springboot默认logback配置 &ndash;&gt;-->
-<!--                <exclusion>-->
-<!--                    <groupId>org.springframework.boot</groupId>-->
-<!--                    <artifactId>spring-boot-starter-logging</artifactId>-->
-<!--                </exclusion>-->
-<!--            </exclusions>-->
         </dependency>
         <!--项目依赖-->
         <dependency>
@@ -50,7 +46,6 @@
             <artifactId>seahouse-compoment</artifactId>
             <version>1.0.0-SNAPSHOT</version>
         </dependency>
-
         <!-- web项目-->
         <dependency>
             <groupId>javax.servlet</groupId>
@@ -60,20 +55,14 @@
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.apache.tomcat.embed</groupId>-->
-<!--            <artifactId>tomcat-embed-jasper</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>org.apache.tomcat</groupId>-->
-<!--            <artifactId>tomcat-jsp-api</artifactId>-->
-<!--        </dependency>-->
-        <dependency>
-            <groupId>net.sourceforge.nekohtml</groupId>
-            <artifactId>nekohtml</artifactId>
-            <version>1.9.22</version>
-        </dependency>
-
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.tomcat.embed</groupId>-->
+        <!--            <artifactId>tomcat-embed-jasper</artifactId>-->
+        <!--        </dependency>-->
+        <!--        <dependency>-->
+        <!--            <groupId>org.apache.tomcat</groupId>-->
+        <!--            <artifactId>tomcat-jsp-api</artifactId>-->
+        <!--        </dependency>-->
         <!--添加依赖 热部署-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -112,9 +101,8 @@
             </plugin>
         </plugins>
         <!--手动指定maven打包路径-->
-        <!--        <directory>src/main/resources</directory>-->
-<!--        <directory>/target/</directory>-->
-
+        <!--<directory>src/main/resources</directory>-->
+        <!--<directory>/target/</directory>-->
     </build>
     <repositories>
         <repository>
