@@ -263,19 +263,16 @@ public class MyWebAppConfig implements WebMvcConfigurer {
         InterceptorRegistration registration = registry.addInterceptor(new HandlerInterceptor() {
             @Override
             public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-
                 System.out.println("自定义拦截器");
                 return true;
             }
 
             @Override
             public void postHandle(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView) throws Exception {
-
             }
 
             @Override
             public void afterCompletion(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex) throws Exception {
-
             }
         });
         //排除的路径

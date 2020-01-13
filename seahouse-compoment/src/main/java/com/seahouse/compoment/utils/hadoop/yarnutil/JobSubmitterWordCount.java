@@ -39,20 +39,20 @@ public class JobSubmitterWordCount {
         //1***************设置JPB要访问的文件系统
         conf.set("fs.defaultFS", "hdfs://192.168.106.100:9000");
         //2*************** mapreduce 放在哪里运行     如果是local就是本地运行  或者yarn
-        conf.set("mapreduce.framename", "yarn");
+        conf.set("mapreduce.framework.name", "yarn");
         //设置resourcemanager 地址
         conf.set("yarn.resourcemanager.hostname", "192.168.106.100");
         //如果要在windows上来提交job则需要提交下面这个参数 因为windows下和linux下执行的语句不同
-        conf.set("mapreduce.app-submission.cross-platform","true");
+        conf.set("mapreduce.app-submission.cross-platform","false");
         Job job = Job.getInstance(conf);
 //        job.setInputFormatClass(SequenceFileInputFormat.class);
 //        job.setOutputFormatClass(SequenceFileOutputFormat.class);
 
         //******************3封装工程为jar包
         //可以使用这种绝对路径
-//        job.setJar("d:/test.jar");
+        job.setJar("/Volumes/exfat/hadoop/mapreduce24-0.0.1-SNAPSHOT.jar");
         //通过类加载获取当前类的jar包
-        job.setJarByClass(JobSubmitterWordCount.class);
+//        job.setJarByClass(JobSubmitterWordCount.class);
 
         //4封装参数 本次job调用的mapper实现类
         job.setMapperClass(WordCountAhc998Mapper.class);

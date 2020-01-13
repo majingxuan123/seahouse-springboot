@@ -1,6 +1,7 @@
 package com.seahouse.compoment.utils.hadoop.mapreduce.wordcount;
 
 import org.apache.hadoop.io.IntWritable;
+import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
@@ -18,7 +19,7 @@ import java.io.IOException;
  *
  *
  */
-public class WordCountAhc998Mapper extends Mapper<IntWritable, Text, Text, IntWritable> {
+public class WordCountAhc998Mapper extends Mapper<LongWritable, Text, Text, IntWritable> {
 
     /**
      * map方法
@@ -31,12 +32,12 @@ public class WordCountAhc998Mapper extends Mapper<IntWritable, Text, Text, IntWr
      *
      *
      *
-     * 17879	08066CB8F918981B47370CB3508444A8E1EA774C72BE3BC8C5973BBEA3E0457F
-     * 17880	08067644C09E1EC3F3471EE9F6C86C58177D2621C3C8E588331FA2427D7910EE
-     * 17881	08072961644C3A10657F700215B539D026A2FDFE43F994FED35DEB94C051453A
+     * 1	08066CB8F918981B47370CB3508444A8E1EA774C72BE3BC8C5973BBEA3E0457F
+     * 2	08067644C09E1EC3F3471EE9F6C86C58177D2621C3C8E588331FA2427D7910EE
+     * 3	08072961644C3A10657F700215B539D026A2FDFE43F994FED35DEB94C051453A
      */
     @Override
-    protected void map(IntWritable key, Text value, Context context) throws IOException, InterruptedException {
+    protected void map(LongWritable key, Text value, Context context) throws IOException, InterruptedException {
         //获取一行数据
         String line = value.toString();
         //根据字段切分

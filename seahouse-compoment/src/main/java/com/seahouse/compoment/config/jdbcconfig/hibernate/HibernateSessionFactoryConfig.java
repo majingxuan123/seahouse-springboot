@@ -1,15 +1,8 @@
 package com.seahouse.compoment.config.jdbcconfig.hibernate;
 
-import org.mybatis.spring.SqlSessionFactoryBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingClass;
-import org.springframework.cache.CacheManager;
 import org.springframework.context.annotation.*;
 import org.springframework.orm.hibernate5.LocalSessionFactoryBean;
-import sun.awt.SunHints;
-
-import javax.annotation.Resource;
 import javax.sql.DataSource;
 import java.util.Properties;
 

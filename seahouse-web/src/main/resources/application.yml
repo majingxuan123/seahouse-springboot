@@ -5,8 +5,6 @@ server:
     #*.jar
     additional-tld-skip-patterns: .jar
     max-threads: 100
-
-
     uri-encoding: UTF-8
 
 spring:
@@ -60,12 +58,37 @@ spring:
   jpa:
     open-in-view: true
   redis:
-    host: 192.168.3.108
+    host: 127.0.0.1
     port: 6379
   servlet:
     multipart:
       file-size-threshold: 0
       max-file-size: 2500MB
+  #  #配置rabbitMq 服务器
+  rabbitmq:
+    host: 192.168.106.10
+    port: 5672
+    username: guest
+    password: guest
+    #虚拟host 可以不设置,使用server默认host
+    virtual-host:
+    listener:
+      study:
+        queue:
+          name: annotation-queue
+          declare: true
+        exchange:
+          name: annotation-exchange
+          declare: true
+          type: topic
+          ignoreDeclarationException: true
+        key: annotation-key
+      simple:
+        #手动签收
+        acknowledge-mode: manual
+        #默认接收大小
+        concurrency: 5
+        max-concurrency: 10
 
 hdfs:
   #hdfs namenode地址

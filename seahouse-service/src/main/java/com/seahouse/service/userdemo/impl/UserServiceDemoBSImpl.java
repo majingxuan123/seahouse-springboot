@@ -5,13 +5,10 @@ import com.seahouse.compoment.utils.excelutils.ExcelUtils;
 import com.seahouse.domain.entity.TUser;
 import com.seahouse.service.userdemo.UserServiceDemoBS;
 import org.springframework.stereotype.Service;
-
 import javax.annotation.Resource;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
-
-import static com.seahouse.compoment.utils.excelutils.ExcelUtils.excelListsToJson;
 
 /**
  * <ul>
@@ -51,7 +48,7 @@ public class UserServiceDemoBSImpl implements UserServiceDemoBS {
             e.printStackTrace();
         }
 
-        String str = excelListsToJson(list);
+        String str = ExcelUtils.excelListsToJson(list);
 
         System.out.println(str);
 

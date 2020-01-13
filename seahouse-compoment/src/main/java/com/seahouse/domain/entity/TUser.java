@@ -13,7 +13,7 @@ import javax.persistence.SequenceGenerator;
 
 /**
  * T_user.实体类
- * 创建时间：2019-05-12 17:08:12
+ * 创建时间：2020-01-13 16:19:13
  */
 
 @SuppressWarnings("serial")

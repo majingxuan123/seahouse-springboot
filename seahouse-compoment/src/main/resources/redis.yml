@@ -1,6 +1,6 @@
 redis:
   database: 1
-  host: 192.168.106.178
+  host: 127.0.0.1
 #  password: fanyu@2018
   port: 6379
   timeout: 3000

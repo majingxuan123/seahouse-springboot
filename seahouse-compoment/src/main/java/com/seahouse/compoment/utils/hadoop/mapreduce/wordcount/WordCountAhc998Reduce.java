@@ -42,10 +42,10 @@ public class WordCountAhc998Reduce extends Reducer<Text, IntWritable, Text, IntW
     @Override
     protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws IOException, InterruptedException {
         int sum = 0;
-        Iterator iterator = values.iterator();
+        Iterator<IntWritable> iterator = values.iterator();
         while (iterator.hasNext()){
             //获取一行的数据ID
-            IntWritable id = (IntWritable) iterator.next();
+            IntWritable id = iterator.next();
             //id相加
             sum+=id.get();
         }

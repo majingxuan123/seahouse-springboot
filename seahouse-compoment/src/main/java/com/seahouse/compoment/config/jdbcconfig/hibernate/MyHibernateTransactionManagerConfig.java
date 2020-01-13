@@ -28,8 +28,8 @@ import javax.xml.crypto.Data;
 //@AutoConfigureAfter(HibernateSessionFactoryConfig.class)
 public class MyHibernateTransactionManagerConfig {
 
-    @Bean
-    @ConditionalOnMissingBean
+//    @Bean
+//    @ConditionalOnMissingBean
     public HibernateTransactionManager hibernateTransactionManager(SessionFactory sessionFactory,DataSource dataSource) {
         HibernateTransactionManager hibernateTransactionManager = new HibernateTransactionManager();
         hibernateTransactionManager.setSessionFactory(sessionFactory);

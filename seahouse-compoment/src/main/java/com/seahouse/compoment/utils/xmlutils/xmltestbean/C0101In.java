@@ -59,6 +59,7 @@ public class C0101In {
     @XmlElement(name = "ZDF005")
     private String zdf005;
 
+
     @XmlTransient()
     public String getZke737() {
         return zke737;

@@ -1,7 +1,6 @@
 package com.seahouse.service.userdemo;
 
 import com.seahouse.domain.entity.TUser;
-import com.seahouse.domain.userdemo.User;
 
 /**
  * <ul>

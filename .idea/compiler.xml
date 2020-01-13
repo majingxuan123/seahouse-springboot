@@ -12,7 +12,7 @@
         <module name="seahouse-api" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
+    <bytecodeTargetLevel>
       <module name="seahouse-api" target="1.8" />
       <module name="seahouse-compoment" target="1.8" />
       <module name="seahouse-service" target="1.8" />
@@ -25,7 +25,6 @@
       <module name="seahouse-api" options="-parameters" />
       <module name="seahouse-compoment" options="-parameters" />
       <module name="seahouse-service" options="-parameters" />
-      <module name="seahouse-springboot" options="-parameters" />
       <module name="seahouse-web" options="-parameters" />
     </option>
   </component>
