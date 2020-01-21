@@ -54,20 +54,18 @@ import java.util.Date;
 @ConditionalOnClass({JdbcTemplate.class,DataSource.class, HibernateTemplateConfig.class, DataSourceConfig.class})
 public class CommonDaoImpl extends HibernateDaoSupport implements CommonDao {
     private Logger log = LoggerFactory.getLogger(this.getClass());
-    @Resource(
-            name = "jdbcTemplate"
-    )
+
+    @Resource(name = "jdbcTemplate")
     private JdbcTemplate jdbcTemplate;
 
     public CommonDaoImpl() {
     }
 
-    @Resource(
-            name = "sessionFactory"
-    )
+    @Resource(name = "sessionFactory")
     public void setSuperSessionFactory(SessionFactory sessionFactory) {
         super.setSessionFactory(sessionFactory);
     }
+
     @Override
     public void saveEntity(Serializable entity) {
         this.getHibernateTemplate().save(entity);
@@ -142,6 +140,10 @@ public class CommonDaoImpl extends HibernateDaoSupport implements CommonDao {
 //    public <T> List<T> getDataList(DetachedCriteria criteria) {
 //        return this.getHibernateTemplate().findByCriteria(criteria);
 //    }
+
+    /**
+     *
+     */
     @Override
     public void flush() {
         this.getHibernateTemplate().flush();

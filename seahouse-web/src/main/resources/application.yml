@@ -6,6 +6,9 @@ server:
     additional-tld-skip-patterns: .jar
     max-threads: 100
     uri-encoding: UTF-8
+  servlet:
+    #根目录 如果这里修改了   html中静态文件引用地址也要相应更改
+    context-path: /
 
 spring:
   banner:
@@ -20,7 +23,6 @@ spring:
     suffix: .flt
   resources:
     static-locations: [classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/]
-
     chain:
       strategy:
         content:
@@ -60,13 +62,14 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
+#    password: 123
   servlet:
     multipart:
       file-size-threshold: 0
       max-file-size: 2500MB
   #  #配置rabbitMq 服务器
   rabbitmq:
-    host: 192.168.106.10
+    host: 192.168.106.19
     port: 5672
     username: guest
     password: guest
@@ -95,3 +98,17 @@ hdfs:
   url: hdfs://192.168.106.100:9000/
   #hdfs 用户
   user: root
+http:
+  client:
+      #最大连接数
+      maxTotal: 100
+      #并发数
+      defaultMaxPerRoute: 20
+      #创建连接最长时间
+      connectTimeout: 1000
+      #取到连接最长时间
+      connectionRequestTimeout: 2000
+      #数据传输最长时间
+      socketTimeout: 10000
+      #提交前测试连接是否可用
+      staleConnectionCheckEnabled: true

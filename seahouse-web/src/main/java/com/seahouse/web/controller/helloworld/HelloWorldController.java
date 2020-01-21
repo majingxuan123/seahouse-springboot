@@ -35,9 +35,13 @@ public class HelloWorldController {
     @Resource(name = "helloWorldBsImpl")
     private HelloWorldBS helloWorldBS;
 
+    private static final org.slf4j.Logger log = org.slf4j.LoggerFactory.getLogger(HelloWorldController.class);
+
+
     @RequestMapping("/hello")
     public String helloWorld(HttpServletRequest request, HttpServletResponse response) {
         helloWorldBS.sayHello();
+        log.info("登陆网址：{}","pages/hello/hello");
         return "pages/hello/hello";
     }
 

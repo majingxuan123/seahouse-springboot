@@ -32,15 +32,18 @@ public class CodeUtil {
     public static String getEncoding(String str) {
         String encode = "GB2312";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {      //判断是不是GB2312
+            //判断是不是GB2312
+            if (str.equals(new String(str.getBytes(encode), encode))) {
                 String s = encode;
-                return s;      //是的话，返回“GB2312“，以下代码同理
+                //是的话，返回“GB2312“，以下代码同理
+                return s;
             }
         } catch (Exception exception) {
         }
         encode = "ISO-8859-1";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {      //判断是不是ISO-8859-1
+            //判断是不是ISO-8859-1
+            if (str.equals(new String(str.getBytes(encode), encode))) {
                 String s1 = encode;
                 return s1;
             }
@@ -48,7 +51,8 @@ public class CodeUtil {
         }
         encode = "UTF-8";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {   //判断是不是UTF-8
+            //判断是不是UTF-8
+            if (str.equals(new String(str.getBytes(encode), encode))) {
                 String s2 = encode;
                 return s2;
             }
@@ -56,13 +60,15 @@ public class CodeUtil {
         }
         encode = "GBK";
         try {
-            if (str.equals(new String(str.getBytes(encode), encode))) {      //判断是不是GBK
+            //判断是不是GBK
+            if (str.equals(new String(str.getBytes(encode), encode))) {
                 String s3 = encode;
                 return s3;
             }
         } catch (Exception exception3) {
         }
-        return "";        //如果都不是，说明输入的内容不属于常见的编码格式。
+        //如果都不是，说明输入的内容不属于常见的编码格式。
+        return "";
     }
 
 }

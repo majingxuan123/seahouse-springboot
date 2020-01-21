@@ -60,11 +60,7 @@
             <optional>true</optional>
         </dependency>
     </dependencies>
-    <build>
-        <finalName>springboot-seahouse</finalName>
-        <pluginManagement>
-        </pluginManagement>
-        <plugins>
+
             <!-- 打包项目 mvn clean package -->
 <!--            <plugin>-->
 <!--                <groupId>org.springframework.boot</groupId>-->
@@ -79,19 +75,16 @@
 <!--                </dependencies>-->
 <!--            </plugin>-->
 
-
+    <build>
+        <finalName>springboot-seahouse</finalName>
+        <pluginManagement>
+        </pluginManagement>
+        <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.0.2</version>
+                <artifactId>maven-surefire-plugin</artifactId>
                 <configuration>
-                    <classesDirectory>target/classes/</classesDirectory>
-                    <archive>
-                        <manifest>                 <!-- dubbo启动类 -->
-                            <mainClass>com.seahouse.SeahouseCompomentApplication
-                            </mainClass>                 <!-- 打包时MANIFEST.MF 文件不记录时间戳 版本 -->
-                        </manifest>
-                    </archive>
+                    <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
             </plugin>
         </plugins>

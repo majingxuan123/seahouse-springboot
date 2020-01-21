@@ -29,7 +29,7 @@ import org.springframework.context.annotation.Configuration;
  * @author majx
  * @version 1.0.0
  */
-@Configuration
+//@Configuration
 public class RabbitMQBinding001 {
 
     /**

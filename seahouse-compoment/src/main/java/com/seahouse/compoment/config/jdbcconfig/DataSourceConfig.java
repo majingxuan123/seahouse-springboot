@@ -1,6 +1,7 @@
 package com.seahouse.compoment.config.jdbcconfig;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
@@ -40,6 +41,7 @@ public class DataSourceConfig {
         @Qualifier(value = "dataSource")
         @Primary
         @ConfigurationProperties(prefix = "c3p0")
+        @ConditionalOnMissingBean
         public DataSource dataSource() {
             return DataSourceBuilder.create().type(com.mchange.v2.c3p0.ComboPooledDataSource.class).build();
         }

@@ -34,8 +34,6 @@ public class DoubleUtil {
 
     /**
      * 将传入的两个double类型相乘
-     * <p>
-     * 第一个减去第二个
      *
      * @param num1
      * @param num2

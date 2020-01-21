@@ -1,5 +1,6 @@
 package com.seahouse;
 
+import com.seahouse.compoment.rabbitmq.bean.Order_RabbitMQ;
 import com.seahouse.compoment.utils.dao.CommonDao;
 import com.seahouse.compoment.utils.javabeantool.JavabeanTool;
 import org.junit.Test;
@@ -117,4 +118,19 @@ public class TestRabbitMQ {
         CorrelationData correlationData = new CorrelationData("123");
         rabbitTemplate.convertAndSend("annotation-exchange", "annotation-key", "用于测试annotation",correlationData);
     }
+
+    /**
+     *
+     */
+    @Test
+    public void testSendMessageBean() {
+        Order_RabbitMQ order_rabbitMQ = new Order_RabbitMQ();
+        order_rabbitMQ.setDesc("测试传送bean");
+        order_rabbitMQ.setId("987456");
+
+        //这里的参数在业务中应该是应该全局唯一的代码  用于发送消息成功后确认
+        CorrelationData correlationData = new CorrelationData("123654789");
+        rabbitTemplate.convertAndSend("annotation-bean-exchange", "annotation-bean-key", order_rabbitMQ,correlationData);
+    }
+
 }

@@ -28,9 +28,8 @@ import java.util.Set;
  */
 
 //@PropertySource("classpath:application.yml")
-@Component
+//@Component
 public class ConsumerAnnotation {
-
 
     @RabbitListener(bindings = @QueueBinding(value = @Queue(value = "${spring.rabbitmq.listener.study.queue.name}",
             declare = "${spring.rabbitmq.listener.study.queue.declare}"),

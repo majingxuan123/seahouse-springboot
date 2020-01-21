@@ -4,10 +4,29 @@
     <list default="true" id="69203e3c-ab02-43c1-ad66-0fae82e38fb3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/seahouse-api/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-api/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-api/src/main/java/com/seahouse/SeahouseApiApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-api/src/main/java/com/seahouse/SeahouseApiApplication.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-compoment/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/config/jdbcconfig/DataSourceConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/config/jdbcconfig/DataSourceConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/RabbitMQConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/RabbitMQConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/binding001/RabbitMQBinding001.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/binding001/RabbitMQBinding001.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/withannotation/ConsumerAnnotation.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/withannotation/ConsumerAnnotation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/codeutils/CodeUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/codeutils/CodeUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/dao/impl/CommonDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/dao/impl/CommonDaoImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/doubleutils/DoubleUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/doubleutils/DoubleUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/hadoop/hdfsutils/HdfsClientUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/hadoop/hdfsutils/HdfsClientUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/redisutils/RedisConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/redisutils/RedisConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/zookeeperutil/ZookeeperUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/utils/zookeeperutil/ZookeeperUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/test/java/com/seahouse/SeahouseCompomentApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/test/java/com/seahouse/SeahouseCompomentApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-compoment/src/test/java/com/seahouse/TestRabbitMQ.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-compoment/src/test/java/com/seahouse/TestRabbitMQ.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-service/src/main/java/com/seahouse/service/userdemo/impl/UserServiceDemoBSImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-service/src/main/java/com/seahouse/service/userdemo/impl/UserServiceDemoBSImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/seahouse-web/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-web/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/java/com/seahouse/SeahouseWebApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-web/src/main/java/com/seahouse/SeahouseWebApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/java/com/seahouse/ServletInitializer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/java/com/seahouse/web/controller/helloworld/HelloWorldController.java" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-web/src/main/java/com/seahouse/web/controller/helloworld/HelloWorldController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/seahouse-web/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/seahouse-web/src/main/webapp/WEB-INF/web.xml" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -90,10 +109,10 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41829485" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -125,23 +144,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.TestRabbitMQ.testSendMessageAnnotation">
-    <configuration name="SeahouseCompomentApplicationTests.testProducter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="seahouse-compoment" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.seahouse.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.seahouse" />
-      <option name="MAIN_CLASS_NAME" value="com.seahouse.SeahouseCompomentApplicationTests" />
-      <option name="METHOD_NAME" value="testProducter" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Spring Boot.SeahouseWebApplication">
     <configuration name="SeahouseCompomentApplicationTests.testSendMessage" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="seahouse-compoment" />
       <extension name="coverage">
@@ -206,6 +209,22 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestRabbitMQ.testSendMessageBean" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="seahouse-compoment" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.seahouse.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.seahouse" />
+      <option name="MAIN_CLASS_NAME" value="com.seahouse.TestRabbitMQ" />
+      <option name="METHOD_NAME" value="testSendMessageBean" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="SeahouseApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="seahouse-api" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.seahouse.SeahouseApiApplication" />
@@ -236,11 +255,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TestRabbitMQ.testSendMessageBean" />
         <item itemvalue="JUnit.TestRabbitMQ.testSendMessageAnnotation" />
         <item itemvalue="JUnit.SeahouseCompomentApplicationTests.testSendMessageAnnotation" />
         <item itemvalue="JUnit.SeahouseCompomentApplicationTests.testSendMessage" />
         <item itemvalue="JUnit.SeahouseCompomentApplicationTests.testSendMessage2" />
-        <item itemvalue="JUnit.SeahouseCompomentApplicationTests.testProducter" />
       </list>
     </recent_temporary>
   </component>
@@ -249,7 +268,17 @@
       <serviceView>
         <option name="contentProportion" value="0.0740941" />
         <treeState>
-          <expand />
+          <expand>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1fcccaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+            <path>
+              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@1fcccaea" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@41ba9ad2" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+            </path>
+          </expand>
           <select />
         </treeState>
       </serviceView>
@@ -288,7 +317,22 @@
       <workItem from="1578901966868" duration="1642000" />
       <workItem from="1578903808529" duration="818000" />
       <workItem from="1578905348533" duration="3939000" />
-      <workItem from="1578916786225" duration="1206000" />
+      <workItem from="1578916786225" duration="7369000" />
+      <workItem from="1579004992859" duration="12411000" />
+      <workItem from="1579057687901" duration="234000" />
+      <workItem from="1579057971848" duration="88000" />
+      <workItem from="1579067013469" duration="5542000" />
+      <workItem from="1579075032084" duration="534000" />
+      <workItem from="1579076492210" duration="1194000" />
+      <workItem from="1579179927469" duration="175000" />
+      <workItem from="1579180402224" duration="20000" />
+      <workItem from="1579180837095" duration="1596000" />
+      <workItem from="1579241516094" duration="1662000" />
+      <workItem from="1579248482660" duration="3994000" />
+      <workItem from="1579254209044" duration="313000" />
+      <workItem from="1579339819209" duration="2243000" />
+      <workItem from="1579363423304" duration="625000" />
+      <workItem from="1579535697076" duration="1095000" />
     </task>
     <task id="LOCAL-00001" summary="2020-01-13">
       <created>1578917132887</created>
@@ -297,7 +341,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578917132887</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2020-01-13&#10;优化pom文件依赖">
+      <created>1578918081635</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1578918081635</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -318,7 +369,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2020-01-13" />
-    <option name="LAST_COMMIT_MESSAGE" value="2020-01-13" />
+    <MESSAGE value="2020-01-13&#10;优化pom文件依赖" />
+    <option name="LAST_COMMIT_MESSAGE" value="2020-01-13&#10;优化pom文件依赖" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -330,12 +382,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/RabbitMQConfig.java</url>
-          <line>185</line>
+          <line>143</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/RabbitMQConfig.java</url>
-          <line>143</line>
+          <line>101</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
@@ -344,18 +396,8 @@
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/MyMessageConverter.java</url>
-          <line>15</line>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/MyMessageConverter.java</url>
-          <line>20</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/seahouse-compoment/src/main/java/com/seahouse/compoment/rabbitmq/withannotation/ConsumerAnnotation.java</url>
-          <line>42</line>
+          <line>41</line>
           <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>

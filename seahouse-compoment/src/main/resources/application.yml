@@ -1,12 +1,3 @@
-#服务器
-server:
-  port: 8080
-  tomcat:
-    #*.jar
-    additional-tld-skip-patterns: .jar
-    max-threads: 100
-    uri-encoding: UTF-8
-
 spring:
   banner:
     charset: UTF-8
@@ -20,7 +11,6 @@ spring:
     suffix: .flt
   resources:
     static-locations: [classpath:/META-INF/resources/,classpath:/resources/,classpath:/static/,classpath:/public/]
-
     chain:
       strategy:
         content:
@@ -36,22 +26,6 @@ spring:
           # Version string to use for the Version Strategy.
           version: v1.0.0
       # Locations of static resources.
-  thymeleaf:
-    # Enable template caching. 开发阶段关闭缓存  不然没法看到实时页面
-    cache: false
-    # Check that the template exists before rendering it.
-    check-template: true
-    servlet:
-      # Content-Type value.
-      content-type: text/html
-      # Template encoding.
-    encoding: utf-8
-    #spring.thymeleaf.excluded-view-names= # Comma-separated list of view names that should be excluded from resolution.
-    mode: HTML
-    # Prefix that gets prepended to view names when building a URL.
-    prefix: classpath:/template/
-    # Suffix that gets appended to view names when building a URL.
-    suffix: .html
   jackson:
     serialization:
       indent_output: true
@@ -60,18 +34,13 @@ spring:
   redis:
     host: 127.0.0.1
     port: 6379
-  servlet:
-    multipart:
-      file-size-threshold: 0
-      max-file-size: 2500MB
-  #  #配置rabbitMq 服务器
   rabbitmq:
-    host: 192.168.106.10
+    host: 192.168.106.19
     port: 5672
     username: guest
     password: guest
-      #虚拟host 可以不设置,使用server默认host
-#    virtual-host: /
+    #虚拟host 可以不设置,使用server默认host
+    virtual-host:
     listener:
       study:
         queue:
@@ -83,7 +52,6 @@ spring:
           type: topic
           ignoreDeclarationException: true
         key: annotation-key
-
       simple:
         #手动签收
         acknowledge-mode: manual

@@ -47,8 +47,8 @@ import java.util.UUID;
  * @version 1.0.0
  */
 
-@Configuration
-@ComponentScan("com.seahouse.compoment.rabbitmq")
+//@Configuration
+//@ComponentScan("com.seahouse.compoment.rabbitmq")
 public class RabbitMQConfig {
 
     @Autowired
@@ -70,48 +70,6 @@ public class RabbitMQConfig {
     }
 
 
-    /**
-     * 单一消费者
-     *
-     * @return
-     */
-    @Bean(name = "singleListenerContainer")
-    public SimpleRabbitListenerContainerFactory listenerContainer() {
-        SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
-        factory.setConnectionFactory(cachingConnectionFactory);
-        factory.setMessageConverter(new Jackson2JsonMessageConverter());
-        factory.setConcurrentConsumers(1);
-        factory.setMaxConcurrentConsumers(1);
-        factory.setPrefetchCount(1);
-        factory.setTxSize(1);
-        factory.setAcknowledgeMode(AcknowledgeMode.AUTO);
-        return factory;
-    }
-
-
-
-    /**
-     * 多个消费者
-     *
-     * @return
-     */
-    @Bean(name = "multiListenerContainer")
-    public SimpleRabbitListenerContainerFactory multiListenerContainer(CachingConnectionFactory cachingConnectionFactory) {
-        SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
-        factoryConfigurer.configure(factory, cachingConnectionFactory);
-        factory.setMessageConverter(new Jackson2JsonMessageConverter());
-        factory.setAcknowledgeMode(AcknowledgeMode.AUTO);
-        factory.setConcurrentConsumers(10);
-        factory.setMaxConcurrentConsumers(20);
-        factory.setPrefetchCount(5);
-        factory.setConsumerTagStrategy(new ConsumerTagStrategy() {
-            @Override
-            public String createConsumerTag(String queue) {
-                return queue+"_"+ UUID.randomUUID().toString();
-            }
-        });
-        return factory;
-    }
 
 
     /**

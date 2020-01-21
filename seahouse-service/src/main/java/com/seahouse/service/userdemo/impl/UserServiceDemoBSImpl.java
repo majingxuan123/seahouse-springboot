@@ -6,6 +6,7 @@ import com.seahouse.domain.entity.TUser;
 import com.seahouse.service.userdemo.UserServiceDemoBS;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
+import javax.transaction.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.util.List;
@@ -31,6 +32,8 @@ import java.util.List;
  * @author majx
  * @version 1.0.0
  */
+
+@Transactional(rollbackOn = {Exception.class})/*增加事务支持*/
 @Service
 public class UserServiceDemoBSImpl implements UserServiceDemoBS {
 
